@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento CC</title>
+</head>
+
+<body>
+
+    <script>
+        function sendMessage() {
+            const data = prompt('insira a data do agendamento (ex: "10/03"):');
+            const hora = prompt('insira a hora do agendamento (ex: "08:15"):');
+            const numeroAlunos = prompt('insira o número de alunos (ex: "40"):');
+            const numeroAcompanhantes = prompt('insira o número de acompanhantes (ex: "5"):');
+            const numeroWpp = prompt('insira o número de telefone para enviar a mensagem (somente números DD+99999999):');
+
+            const mensagem = `Bom dia!\n     Meu nome é Guilherme e sou funcionário do *Centro de Ciências/UFJF*. Espero encontrá-lo(a) bem! Estou entrando em contato para confirmar a vinda de vocês no *dia ${data} às ${hora}*.\n     Aproveito para confirmar se o número de alunos *(${numeroAlunos})* e de acompanhantes *(${numeroAcompanhantes})* está correto e se os outros dados do agendamento não tiveram mudanças. Caso haja alguma, favor informar aqui por mensagem.\n     Informo, caso seja a primeira visita, que o ônibus pode estacionar à frente do Centro de Ciências, e que recomendamos que os alunos (ou a escola) traga um lanche. Temos um espaço de Convivência com mesas e cadeiras, geladeira e micro-ondas, caso necessite.\n\nAgradecemos e aguardamos sua confirmação!`;
+
+            const mensagemWpp = encodeURIComponent(mensagem);
+
+            window.open(`http://wa.me/${numeroWpp}?text=${mensagemWpp}`);
+        }
+
+        sendMessage();
+    </script>
+
+</body>
+
+</html>
