@@ -4,29 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Agendamento CC</title>
 </head>
 
 <body>
+    <div class="header">
+        <img src="https://pbs.twimg.com/profile_images/1054426482033020945/y4QmVxQU_400x400.jpg" alt="Logo Centro de Ciências">
+        <h1>Confirmação de Agendamento</h1>
+    </div>
+    <div class="Container">
+      
+        <div class="form-group">
+            <label for="cordialidade">Cordialidade</label>
+            <select id="cordialidade">
+                <option value="Bom dia!">Bom dia!</option>
+                <option value="Boa tarde!">Boa tarde!</option>
+                <option value="Boa noite!">Boa noite!</option>
+            </select>
+        </div>
 
-    <script>
-        function sendMessage() {
-            const data = prompt('insira a data do agendamento (ex: "10/03"):');
-            const hora = prompt('insira a hora do agendamento (ex: "08:15"):');
-            const numeroAlunos = prompt('insira o número de alunos (ex: "40"):');
-            const numeroAcompanhantes = prompt('insira o número de acompanhantes (ex: "5"):');
-            const numeroWpp = prompt('insira o número de telefone para enviar a mensagem (somente números DD+99999999):');
+        <div class="form-group">
+            <label for="data">Data do agendamento</label>
+            <input type="date" id="data">
+        </div>
 
-            const mensagem = `Bom dia!\n     Meu nome é Guilherme e sou funcionário do *Centro de Ciências/UFJF*. Espero encontrá-lo(a) bem! Estou entrando em contato para confirmar a vinda de vocês no *dia ${data} às ${hora}*.\n     Aproveito para confirmar se o número de alunos *(${numeroAlunos})* e de acompanhantes *(${numeroAcompanhantes})* está correto e se os outros dados do agendamento não tiveram mudanças. Caso haja alguma, favor informar aqui por mensagem.\n     Informo, caso seja a primeira visita, que o ônibus pode estacionar à frente do Centro de Ciências, e que recomendamos que os alunos (ou a escola) traga um lanche. Temos um espaço de Convivência com mesas e cadeiras, geladeira e micro-ondas, caso necessite.\n\nAgradecemos e aguardamos sua confirmação!`;
+        <div class="form-group">
+            <label for="hora">Hora do agendamento</label>
+            <select id="hora">
+                <option value="08:15">08:15</option>
+                <option value="14:00">14:00</option>
+                <option value="19:00">19:00</option>
+            </select>
+        </div>
 
-            const mensagemWpp = encodeURIComponent(mensagem);
+        <div class="form-group">
+            <label for="anoEscolar">Ano escolar</label>
+            <select id="anoEscolar">
+                <option value="Ensino Fundamental 1">Ensino Fundamental 1</option>
+                <option value="Ensino Fundamental 2">Ensino Fundamental 2</option>
+                <option value="Ensino Médio">Ensino Médio</option>
+                <option value="EJA">EJA || Outros</option>
+            </select>
+        </div>
 
-            window.open(`http://wa.me/${numeroWpp}?text=${mensagemWpp}`);
-        }
+        <div class="form-group">
+            <label for="numeroAlunos">Número de alunos</label>
+            <select id="numeroAlunos">
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+            </select>
+        </div>
 
-        sendMessage();
-    </script>
+        <div class="form-group">
+            <label for="numeroAcompanhantes">Número de acompanhantes</label>
+            <select id="numeroAcompanhantes">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+        </div>
 
+        <div class="form-group">
+            <label for="primeiraAtividade">Primeira Atividade</label>
+            <select id="primeiraAtividade">
+                <option value="A Malacologia e suas Aplicações">A Malacologia e suas Aplicações</option>
+                <option value="Aprendendo algoritmos com cubos mágicos">Aprendendo algoritmos com cubos mágicos</option>
+                <option value="Aqui tem Química">Aqui tem Química</option>
+                <option value="Brincando com os Caracóis">Brincando com os Caracóis</option>
+                <option value="Como pensa um computador?">Como pensa um computador?</option>
+                <option value="Conhecendo os Fractais">Conhecendo os Fractais</option>
+                <option value="Contando Histórias com a Geometria">Contando Histórias com a Geometria</option>
+                <option value="De onde vêm as cores?">De onde vêm as cores?</option>
+                <option value="Dinamização do ensino de Ciências e Zoologia">Dinamização do ensino de Ciências e Zoologia</option>
+                <option value="Educação em saúde na prevenção das parasitoses">Educação em saúde na prevenção das parasitoses</option>
+                <option value="Energia e Eletricidade: entendendo como o mundo se move">Energia e Eletricidade: entendendo como o mundo se move</option>
+                <option value="Fazer Ciência no Sítio Arqueológico">Fazer Ciência no Sítio Arqueológico</option>
+                <option value="O Mistério das Pirâmides">O Mistério das Pirâmides</option>
+                <option value="O pulsar da vida é o ritmo do Coração">O pulsar da vida é o ritmo do Coração</option>
+                <option value="O que os Moluscos têm para nos ensinar?">O que os Moluscos têm para nos ensinar?</option>
+                <option value="Observação Astronômica">Observação Astronômica</option>
+                <option value="Pavimentando com Mosaicos Geométricos">Pavimentando com Mosaicos Geométricos</option>
+                <option value="Que parasito é esse?">Que parasito é esse?</option>
+                <option value="Reflexão, Refração e a Pirâmide Holográfica">Reflexão, Refração e a Pirâmide Holográfica</option>
+                <option value="Sombras do tempo: o relógio solar">Sombras do tempo: o relógio solar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="segundaAtividade">Segunda Atividade</label>
+            <select id="segundaAtividade">
+                <option value="A Malacologia e suas Aplicações">A Malacologia e suas Aplicações</option>
+                <option value="Aprendendo algoritmos com cubos mágicos">Aprendendo algoritmos com cubos mágicos</option>
+                <option value="Aqui tem Química">Aqui tem Química</option>
+                <option value="Brincando com os Caracóis">Brincando com os Caracóis</option>
+                <option value="Como pensa um computador?">Como pensa um computador?</option>
+                <option value="Conhecendo os Fractais">Conhecendo os Fractais</option>
+                <option value="Contando Histórias com a Geometria">Contando Histórias com a Geometria</option>
+                <option value="De onde vêm as cores?">De onde vêm as cores?</option>
+                <option value="Dinamização do ensino de Ciências e Zoologia (E.F.1 / E.F.2 / E.M.)">Dinamização do ensino de Ciências e Zoologia (E.F.1 / E.F.2 / E.M.)</option>
+                <option value="Educação em saúde na prevenção das parasitoses">Educação em saúde na prevenção das parasitoses</option>
+                <option value="Energia e Eletricidade: entendendo como o mundo se move">Energia e Eletricidade: entendendo como o mundo se move</option>
+                <option value="Fazer Ciência no Sítio Arqueológico">Fazer Ciência no Sítio Arqueológico</option>
+                <option value="O Mistério das Pirâmides">O Mistério das Pirâmides</option>
+                <option value="O pulsar da vida é o ritmo do Coração">O pulsar da vida é o ritmo do Coração</option>
+                <option value="O que os Moluscos têm para nos ensinar?">O que os Moluscos têm para nos ensinar?</option>
+                <option value="O que os Moluscos têm para nos ensinar? (E.F.2)">O que os Moluscos têm para nos ensinar? (E.F.2)</option>
+                <option value="Observação Astronômica">Observação Astronômica</option>
+                <option value="Pavimentando com Mosaicos Geométricos">Pavimentando com Mosaicos Geométricos</option>
+                <option value="Que parasito é esse?">Que parasito é esse?</option>
+                <option value="Reflexão, Refração e a Pirâmide Holográfica">Reflexão, Refração e a Pirâmide Holográfica</option>
+                <option value="Sombras do tempo: o relógio solar">Sombras do tempo: o relógio solar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="pessoasEspeciais">Há pessoas que necessitam de atendimento especializado no grupo?</label>
+            <select id="pessoasEspeciais">
+                <option value="Não">Não</option>
+                <option value="Sim uma MINORIA é idosa">Sim uma MINORIA é idosa</option>
+                <option value="Sim a MAIORIA OU TODOS são idosos">Sim a MAIORIA OU TODOS são idosos</option>
+                <option value="Sim uma MINORIA necessita de atendimento especializado">Sim uma MINORIA necessita de atendimento especializado</option>
+                <option value="Sim a MAIORIA OU TODOS necessitam de atendimento especializado">Sim a MAIORIA OU TODOS necessitam de atendimento especializado</option>
+                <option value="Sim o grupo é composto por idosos que também necessitam de atendimento especializado">Sim o grupo é composto por idosos que também necessitam de atendimento especializado</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="numeroWpp">Número de telefone para enviar a mensagem (somente números +55+DD+99999999)</label>
+            <input type="text" id="numeroWpp" placeholder="551234567890">
+        </div>
+
+        <button onclick="sendMessage()">Enviar Mensagem</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
